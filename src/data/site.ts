@@ -6,6 +6,15 @@ export const site = {
   region: 'Baixada Santista',
   logo: '/images/logo-aurea-premium.png',
   equipmentImage: '/images/acrus-htm.png',
+  promotion: {
+    title: 'Condição especial por tempo limitado',
+    plans: [
+      { duration: '6 horas', from: 'R$ 700', price: 'R$ 500' },
+      { duration: '8 horas', from: 'R$ 800', price: 'R$ 700' },
+      { duration: '12 horas', from: 'R$ 900', price: 'R$ 700' }
+    ],
+    shipping: 'No Guarujá, não há taxa de frete. Para as demais cidades, consulte a disponibilidade e o frete.'
+  },
   cities: [
     { name: 'Guarujá', slug: 'guaruja', context: 'uma operação de Laser Day com logística regional e preparação técnica no espaço da clínica.' },
     { name: 'Santos', slug: 'santos', context: 'uma agenda de depilação a laser organizada sem a compra de um equipamento próprio.' },
