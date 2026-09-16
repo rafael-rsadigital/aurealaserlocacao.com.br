@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/locacao-acrus.html",
+      "destination": "/locacao-laser/",
+      "permanent": true
+    },
+    {
+      "source": "/acrus-htm-triple-wave.html",
+      "destination": "/acrus-htm/",
+      "permanent": true
+    }
+  ]
+}

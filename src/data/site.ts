@@ -1,7 +1,7 @@
 export const site = {
   name: 'Áurea Laser Locação',
   domain: 'https://aurealaserlocacao.com.br',
-  description: 'Locação de equipamentos profissionais de laser para clínicas de estética na Baixada Santista.',
+  description: 'Locação do equipamento Ácrus HTM Triple Wave para clínicas de estética na Baixada Santista.',
   whatsapp: '5512982906130',
   region: 'Baixada Santista',
   logo: '/images/logo-aurea-premium.png',

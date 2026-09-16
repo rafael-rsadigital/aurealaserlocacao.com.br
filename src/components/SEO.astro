@@ -3,7 +3,22 @@ import { site } from '../data/site';
 interface Props { title:string; description:string; canonical?:string; type?:string; noindex?:boolean; schema?:Record<string, unknown> }
 const { title, description, canonical = Astro.url.pathname, type = 'website', noindex = false, schema } = Astro.props;
 const url = new URL(canonical, site.domain).toString();
+const image = new URL(site.equipmentImage, site.domain).toString();
 ---
-<title>{title}</title><meta name="description" content={description}/><link rel="canonical" href={url}/>{noindex && <meta name="robots" content="noindex"/>}
-<meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:type" content={type}/><meta property="og:url" content={url}/><meta property="og:image" content={new URL(site.equipmentImage, site.domain)}/><meta property="og:locale" content="pt_BR"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content={title}/><meta name="twitter:description" content={description}/><meta name="theme-color" content="#12252d"/>
+<title>{title}</title>
+<meta name="description" content={description}/>
+<meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'}/>
+<link rel="canonical" href={url}/>
+<meta property="og:title" content={title}/>
+<meta property="og:description" content={description}/>
+<meta property="og:type" content={type}/>
+<meta property="og:url" content={url}/>
+<meta property="og:image" content={image}/>
+<meta property="og:locale" content="pt_BR"/>
+<meta property="og:site_name" content={site.name}/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content={title}/>
+<meta name="twitter:description" content={description}/>
+<meta name="twitter:image" content={image}/>
+<meta name="theme-color" content="#12252d"/>
 {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)}/>} 
