@@ -4,7 +4,7 @@ export const site = {
   description: 'Locação de equipamentos profissionais de laser para clínicas de estética na Baixada Santista.',
   whatsapp: '5512982906130',
   region: 'Baixada Santista',
-  logo: '/images/logo.png',
+  logo: '/images/logo-aurea-premium.png',
   equipmentImage: '/images/acrus-htm.png',
   cities: [
     { name: 'Guarujá', slug: 'guaruja', context: 'uma operação de Laser Day com logística regional e preparação técnica no espaço da clínica.' },
