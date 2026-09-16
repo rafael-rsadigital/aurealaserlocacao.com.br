@@ -1,0 +1,10 @@
+---
+import { site, whatsappUrl } from '../data/site';
+const { city } = Astro.props;
+const locationNote = city === 'Guarujá'
+  ? 'No Guarujá, não há taxa de frete.'
+  : city
+    ? `Para ${city}, consulte a disponibilidade e o frete.`
+    : site.promotion.shipping;
+---
+<section class="section pricing-section"><div class="container"><span class="eyebrow">Oferta especial</span><h2>{site.promotion.title}</h2><p class="pricing-lead">Escolha a duração que melhor se encaixa na agenda da sua clínica. Promoção por tempo limitado.</p><div class="grid cards-3 pricing-grid">{site.promotion.plans.map((plan, index)=><div class:list={['price-card', index===1 && 'featured']}><span class="price-duration">{plan.duration}</span><span class="price-old">De {plan.from}</span><strong class="price-now">{plan.price}</strong><a class="btn btn-primary" href={whatsappUrl(`Olá! Gostaria de consultar a disponibilidade da promoção de ${plan.duration}${city ? ` em ${city}` : ''} para minha clínica.`)}>Consultar esta opção</a></div>)}</div><p class="pricing-note">{locationNote}</p></div></section>
