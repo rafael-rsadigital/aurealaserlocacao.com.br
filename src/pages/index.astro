@@ -1,10 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'; import CTA from '../components/CTA.astro'; import FAQ from '../components/FAQ.astro'; import Pricing from '../components/Pricing.astro'; import {site,whatsappUrl} from '../data/site';
 const faq=[
-  {q:'Preciso comprar o equipamento?',a:'Não. A proposta da Áurea Laser é oferecer a locação do Ácrus HTM para operações planejadas da clínica, como um Laser Day.'},
+  {q:'Preciso comprar o equipamento?',a:'Não. A proposta da Áurea Laser é oferecer a locação do Ácrus HTM para um Laser Day ou uma data específica de atendimento.'},
   {q:'A locação inclui uma profissional para realizar os atendimentos?',a:'Não. O foco da locação é o equipamento Ácrus HTM Triple Wave para clínicas que já possuem profissional habilitada para realizar os procedimentos. Consulte a Áurea Laser sobre as condições específicas da locação.'},
   {q:'Como funciona a entrega?',a:'A Áurea Laser combina entrega, montagem e preparação técnica conforme a disponibilidade, a cidade e as condições da locação.'},
-  {q:'Como consulto disponibilidade?',a:'Fale pelo WhatsApp informando sua cidade, período desejado e o tipo de operação.'}
+  {q:'Como consulto disponibilidade?',a:'Fale pelo WhatsApp informando sua cidade, período escolhido e o tipo de atendimento.'}
 ];
 const organization={"@type":"Organization","@id":`${site.domain}/#organization`,name:site.name,url:site.domain,description:site.description,logo:new URL(site.logo,site.domain).toString(),telephone:`+${site.whatsapp}`};
 const service={"@type":"Service","@id":`${site.domain}/#locacao-acrus`,name:'Locação de Ácrus HTM para depilação a laser',serviceType:'Locação de equipamento para depilação a laser',description:'Locação do equipamento Ácrus HTM Triple Wave para clínicas de estética na Baixada Santista.',provider:{"@id":`${site.domain}/#organization`},areaServed:site.cities.map(city=>({"@type":"City",name:city.name})),url:site.domain+'/' };
