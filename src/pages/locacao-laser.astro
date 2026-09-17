@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'; import CTA from '../components/CTA.astro'; import FAQ from '../components/FAQ.astro'; import Pricing from '../components/Pricing.astro'; import {whatsappUrl,site} from '../data/site';
-const organization={"@type":"Organization","@id":`${site.domain}/#organization`,name:site.name,url:site.domain};
+const organization={"@type":"Organization","@id":`${site.domain}/#organization`,name:site.name,url:site.domain,sameAs:site.socialLinks.map((social:any)=>social.url)};
 const service={"@type":"Service","@id":`${site.domain}/locacao-laser/#service`,name:'Locação de Laser Ácrus HTM para Clínicas de Estética',serviceType:'Locação de equipamento para depilação a laser',provider:{"@id":`${site.domain}/#organization`},areaServed:site.cities.map(city=>({"@type":"City",name:city.name})),url:site.domain+'/locacao-laser/'};
 const schema={"@context":"https://schema.org","@graph":[organization,service]} as Record<string, unknown>;
 const steps=[['01','Consulte a disponibilidade','Informe sua cidade, o período escolhido e o tipo de atendimento.'],['02','Escolha a data','A data é definida conforme a agenda da clínica e a disponibilidade do equipamento.'],['03','Prepare sua agenda','Organize os atendimentos e comunique seus clientes.'],['04','Receba e monte','A Áurea Laser realiza a entrega e a montagem técnica conforme combinado.'],['05','Realize os atendimentos','Com o equipamento disponível durante o período contratado, sua equipe realiza os procedimentos conforme seus protocolos.']];

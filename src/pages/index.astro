@@ -6,7 +6,7 @@ const faq=[
   {q:'Como funciona a entrega?',a:'A Áurea Laser combina entrega, montagem e preparação técnica conforme a disponibilidade, a cidade e as condições da locação.'},
   {q:'Como consulto disponibilidade?',a:'Fale pelo WhatsApp informando sua cidade, período escolhido e o tipo de atendimento.'}
 ];
-const organization={"@type":"Organization","@id":`${site.domain}/#organization`,name:site.name,url:site.domain,description:site.description,logo:new URL(site.logo,site.domain).toString(),telephone:`+${site.whatsapp}`};
+const organization={"@type":"Organization","@id":`${site.domain}/#organization`,name:site.name,url:site.domain,description:site.description,logo:new URL(site.logo,site.domain).toString(),telephone:`+${site.whatsapp}`,sameAs:site.socialLinks.map((social:any)=>social.url)};
 const service={"@type":"Service","@id":`${site.domain}/#locacao-acrus`,name:'Locação de Ácrus HTM para depilação a laser',serviceType:'Locação de equipamento para depilação a laser',description:'Locação do equipamento Ácrus HTM Triple Wave para clínicas de estética na Baixada Santista.',provider:{"@id":`${site.domain}/#organization`},areaServed:site.cities.map(city=>({"@type":"City",name:city.name})),url:site.domain+'/' };
 const schema={"@context":"https://schema.org","@graph":[organization,service,{"@type":"WebSite","@id":`${site.domain}/#website`,name:site.name,url:site.domain}]} as Record<string, unknown>;
 ---

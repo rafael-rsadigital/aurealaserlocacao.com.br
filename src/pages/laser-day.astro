@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'; import CTA from '../components/CTA.astro'; import FAQ from '../components/FAQ.astro'; import Pricing from '../components/Pricing.astro'; import {whatsappUrl,site} from '../data/site';
-const organization={"@type":"Organization","@id":`${site.domain}/#organization`,name:site.name,url:site.domain};
+const organization={"@type":"Organization","@id":`${site.domain}/#organization`,name:site.name,url:site.domain,sameAs:site.socialLinks.map((social:any)=>social.url)};
 const service={"@type":"Service","@id":`${site.domain}/laser-day/#service`,name:'Laser Day com locação de Ácrus HTM',serviceType:'Laser Day com equipamento para depilação a laser',provider:{"@id":`${site.domain}/#organization`},areaServed:site.cities.map(city=>({"@type":"City",name:city.name})),url:site.domain+'/laser-day/'};
 const schema={"@context":"https://schema.org","@graph":[organization,service]} as Record<string, unknown>;
 const steps=[['01','A clínica agenda','Você concentra os clientes e estrutura o dia de atendimentos.'],['02','A Áurea entrega','O equipamento é levado ao local na data e conforme a logística combinada.'],['03','Montagem e preparo','A máquina é montada e preparada tecnicamente para os atendimentos.'],['04','Os atendimentos acontecem','A clínica realiza os atendimentos com sua equipe ou profissional habilitada.'],['05','Retirada conforme combinado','Ao final do período contratado, o equipamento é retirado conforme combinado.']];

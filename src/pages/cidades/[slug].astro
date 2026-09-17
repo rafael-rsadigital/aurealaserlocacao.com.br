@@ -11,7 +11,7 @@ const localFaq:any={
   bertioga:{q:'Como consultar o frete para locação de laser em Bertioga?',a:'Para Bertioga, consulte a disponibilidade e o frete junto com o período escolhido para a sua clínica.'}
 }[city.slug];
 const faq=[{q:`Como funciona a locação de laser em ${city.name}?`,a:`Você informa o período e o tipo de atendimento A Áurea Laser verifica a disponibilidade e combina entrega, montagem e preparação técnica conforme o caso.`},{q:'Posso organizar um Laser Day?',a:'Sim. O modelo Laser Day concentra a agenda da clínica em uma data escolhida para os atendimentos.'},{q:`A Áurea Laser atende ${city.name} sempre?`,a:'O atendimento depende de disponibilidade de agenda e logística. Consulte a Áurea Laser pelo WhatsApp.'},localFaq];
-const organization={"@type":"Organization","@id":`${site.domain}/#organization`,name:site.name,url:site.domain};
+const organization={"@type":"Organization","@id":`${site.domain}/#organization`,name:site.name,url:site.domain,sameAs:site.socialLinks.map((social:any)=>social.url)};
 const service={"@type":"Service","@id":`${site.domain}/cidades/${city.slug}/#service`,name:`Locação de Ácrus HTM em ${city.name}`,serviceType:'Locação de equipamento para depilação a laser',provider:{"@id":`${site.domain}/#organization`},areaServed:{"@type":"City",name:city.name},url:`${site.domain}/cidades/${city.slug}/`};
 const schema={"@context":"https://schema.org","@graph":[organization,service]} as Record<string, unknown>;
 ---

@@ -23,7 +23,9 @@ export const site = {
     { name: 'Cubatão', slug: 'cubatao', context: 'um Laser Day planejado de acordo com a agenda e a disponibilidade do equipamento.' },
     { name: 'Bertioga', slug: 'bertioga', context: 'uma operação de laser para clínica com entrega técnica previamente combinada.' }
   ],
-  socialLinks: []
+  socialLinks: [
+    { label: 'Instagram', url: 'https://www.instagram.com/aurealaserlocacao/' }
+  ]
 };
 
 export function whatsappUrl(message = 'Olá! Gostaria de consultar a disponibilidade do Ácrus HTM para a minha clínica.') {

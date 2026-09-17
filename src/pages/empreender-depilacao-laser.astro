@@ -4,7 +4,7 @@ import CTA from '../components/CTA.astro';
 import FAQ from '../components/FAQ.astro';
 import { site, whatsappUrl } from '../data/site';
 const courseMessage = 'Olá! Gostaria de consultar a disponibilidade de vagas para o curso teórico e prático de depilação a laser.';
-const organization={"@type":"Organization","@id":`${site.domain}/#organization`,name:site.name,url:site.domain};
+const organization={"@type":"Organization","@id":`${site.domain}/#organization`,name:site.name,url:site.domain,sameAs:site.socialLinks.map((social:any)=>social.url)};
 const course={"@type":"Course","@id":`${site.domain}/empreender-depilacao-laser/#course`,name:'Curso teórico e prático de depilação a laser',description:'Curso da Áurea Laser sobre fundamentos da depilação a laser, rotina de atendimento, administração e marketing para Laser Day.',provider:{"@id":`${site.domain}/#organization`},url:`${site.domain}/empreender-depilacao-laser/`};
 const schema={"@context":"https://schema.org","@graph":[organization,course]} as Record<string, unknown>;
 const faq=[
