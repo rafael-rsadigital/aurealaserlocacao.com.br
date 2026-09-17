@@ -26,6 +26,14 @@ O build gera HTML estático em `dist/`, sitemap por meio da integração oficial
 - `src/pages/`: páginas comerciais, cidades e blog.
 - `public/images/`: logo e imagem pública do equipamento.
 
+## Diretriz editorial
+
+O site deve escrever como uma empresa que aluga um equipamento para clínicas de estética, e não como uma agência de marketing. Priorize informações concretas sobre o Ácrus HTM, duração da locação, preços, data de atendimento, entrega, montagem, cidades atendidas, profissional habilitada e reserva.
+
+Prefira “alugue o Ácrus HTM por 6, 8 ou 12 horas”, “consulte a disponibilidade para a data da sua clínica” e “entrega e montagem conforme as condições combinadas”. Evite expressões abstratas ou promocionais sem informação, como “potencialize sua operação”, “solução flexível”, “experiência diferenciada”, “tecnologia que transforma sua agenda”, “estratégia personalizada” e “mais possibilidades para seu negócio”.
+
+Antes de publicar qualquer nova copy, verifique se ela responde a uma dúvida real da clínica ou explica uma condição da locação. Não invente preços, cobertura, profissionais, certificações, resultados, avaliações ou itens incluídos que não estejam confirmados nos dados do projeto.
+
 ## Antes de publicar
 
 Confirmar com a empresa o número do WhatsApp, condições contratuais, áreas exatas de atendimento, informações sobre aplicadora/profissionais e textos legais. Não foram incluídos preços, avaliações, endereço, certificações ou promessas não confirmadas.
